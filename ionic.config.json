@@ -1,0 +1,7 @@
+{
+  "name": "My-appstro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
