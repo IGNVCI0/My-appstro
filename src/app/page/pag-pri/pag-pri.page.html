@@ -1,0 +1,97 @@
+<ion-header> 
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"
+      text="Regresar"
+      color="primary">
+      </ion-back-button>
+    </ion-buttons>
+  
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+  </ion-header> 
+  
+
+<ion-content>
+<ion-card>
+  <img src="assets/icon/duocinicio.png" alt="avatar" class="avatar">
+  <ion-card-header>
+    <ion-card-title>Bienvenido</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    Bienvenido a la aplicacion en el cual puedes ver tus horarios y registrar tus asistencias.
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-item>
+    <ion-icon class="iconqr" name="qr-code-outline"></ion-icon>
+    <ion-label>Codigo QR</ion-label>
+    <ion-button routerLink="/pag-qr" (click)="presentLoading()" fill="outline" slot="end">Generar</ion-button>
+  </ion-item>
+
+  <ion-card-content>
+    Crea tu codigo QR para registrar de forma más rapida tu asistencia.
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-item routerLink="/pag-qr" class="ion-activated">
+    <ion-icon class="icon-inicio" name="phone-portrait-outline"></ion-icon>
+    <ion-label>PGY4121-008D</ion-label> 
+  </ion-item>
+
+  <ion-item routerLink="/pag-qr" class="icon-activated">
+    <ion-icon class="icon-inicio" name="git-branch-outline"></ion-icon>
+    <ion-label>ASY4131-008D</ion-label>
+  </ion-item>
+
+  <ion-item routerLink="/pag-qr" class="ion-activated">
+    <ion-icon class="icon-inicio"name="book-outline"></ion-icon>
+    <ion-label>CSY4111-006D</ion-label>
+  </ion-item>
+
+  <ion-item routerLink="/pag-qr">
+    <ion-icon class="icon-inicio" name="glasses-outline"></ion-icon>
+    <ion-label>INI5111-006D</ion-label>
+  </ion-item>
+
+</ion-card>
+
+<div class="details">
+		<h2><strong>Current Weather</strong></h2>
+		<p>Type city name</p>
+
+		<form [formGroup]="weatherForm" (ngSubmit)="search(weatherForm.value)">
+			<ion-input
+				placeholder="Enter City Name, Ex. Paris"
+				formControlName="city"
+			></ion-input>
+
+			<button
+				class="checkWeather"
+				type="submit"
+				[disabled]="!weatherForm.valid"
+			>
+				Submit
+			</button>
+		</form>
+
+
+		<div class="weather" *ngIf="weather">
+			<div>
+				<img [src]="weather.current.weather_icons[0]" />
+				<p class="big">{{weather.current.temperature}}°</p>
+				<p><strong>{{weather.current.weather_descriptions[0]}}</strong></p>
+			</div>
+			<div>
+				<p>
+					{{weather.location.name}}, <span>{{weather.location.country}}</span>
+				</p>
+				<p>{{weather.location.localtime}}</p>
+			</div>
+		</div>
+	</div>
+
+</ion-content>

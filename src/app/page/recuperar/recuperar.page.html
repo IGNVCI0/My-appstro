@@ -1,0 +1,31 @@
+<ion-header> 
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"
+      text="Regresar"
+      color="primary">
+      </ion-back-button>
+    </ion-buttons>
+  
+    <ion-title>Recupera Contraseña</ion-title>
+  </ion-toolbar>
+  </ion-header> 
+  
+<ion-content>
+  <form class="FormularioRecuperar">
+    <ion-item lines="full">
+      <ion-label position="floating">Correo Electronico</ion-label>
+      <ion-input type="text" required></ion-input>
+
+    </ion-item>
+
+      <ion-row>
+      <ion-col>
+        <button class="botonI" expand="block" (click)="presentAlertPrompt()" type="submit">Enviar codigo de verificacion</button>
+      
+        <button type="button" routerLink="/inicio" class="cancelbtn">Cancelar</button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+</ion-content>

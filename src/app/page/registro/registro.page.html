@@ -1,0 +1,52 @@
+<ion-header> 
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"
+      text="Regresar"
+      color="primary">
+      </ion-back-button>
+    </ion-buttons>
+  
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+  <ion-card>
+    <form [formGroup]="formularioRegistro"  (keyup.enter)="guardar()">
+      <ion-list>
+      <ion-item class="item" lines="full">
+        <ion-label position="floating">Nombre de usuario</ion-label>
+        <ion-input formControlName="nombre" ></ion-input>
+      </ion-item>
+  
+      <ion-item class="item" lines="full">
+        <ion-label position="floating">Correo Electronico</ion-label>
+        <ion-input formControlName="correoelectronico" ></ion-input>
+      </ion-item>
+
+
+      <ion-item class="item" lines="full">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="contrasena" ></ion-input>
+      </ion-item>
+
+    
+      <ion-item class="item" lines="full">
+        <ion-label position="floating">Confirmar Contraseña</ion-label>
+        <ion-input formControlName="confirmcontrasena"  ></ion-input>
+      </ion-item>
+
+        
+      <button class="botonI" (click)='guardar()' routerLink= '/inicio'expand="block" type="submit">Crear Cuenta</button>
+      
+      <div class="container">
+        <button type="button" routerLink="/inicio" class="cancelbtn">Cancelar</button>
+        <span class="psw"><a href="/inicio">Ya tienes una cuenta?</a></span>
+      </div>
+      </ion-list>
+    </form>
+  </ion-card>
+</ion-content>
+
+

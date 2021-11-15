@@ -1,0 +1,66 @@
+.cancelbtn {
+    width: auto;
+    font-size: large;
+    padding: 14px 14px;
+    background-color: #aa0404;
+  }
+
+.botonI {
+  background-color: #FFB800;
+  color: white;
+  font-size: large;
+  padding: 14px 14px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.record{
+    margin: 15px 0;
+}
+
+.botonR{
+    background-color: #8BB8E8;
+    color: black;
+    font-size: large;
+    padding: 14px 14px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+
+.FormularioInicio{
+    margin: 5px 0;
+    padding: 20px;
+    
+        
+}
+
+.item{
+    margin:5px 0;
+}
+
+.imgcontainer{
+    
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* DOES NOT WORK - not specific enough */
+.alert-wrapper {
+  background: #e5e5e5;
+}
+
+/* Works - pass "my-custom-class" in cssClass to increase specificity */
+.my-custom-class .alert-wrapper {
+  background: #e5e5e5;
+}
